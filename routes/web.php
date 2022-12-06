@@ -25,6 +25,11 @@ Route::get('/contact', function () {
 Route::get('/services', function () {
     return view('Services');
 });
+
+Route::get('/service', function () {
+    return view('Service');
+});
+
 Route::get('/team', function () {
     return view('team');
 });

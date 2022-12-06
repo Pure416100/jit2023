@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +35,7 @@
 <body>
   
 @extends('layouts.app')
-< <div class="choose_section layout_padding">
+<div class="choose_section layout_padding">
       <div class="container">
        
 
