@@ -38,7 +38,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3">
-          <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+          <div class="logo"><a href="index.html"><img src="images/logo1.png"></a></div>
         </div>
         <div class="col-md-9">
           <div class="menu_text">
@@ -49,9 +49,9 @@
 
                   <div class="padding_left0">
                     @auth
-                    <a href="{{ url('/') }}">Home</a>
+                    <a href="{{ url('/') }}">หน้าแรก</a>
                     @else
-                    <a href="{{ route('login') }}">Login</a>
+                    <a href="{{ route('login') }}">เข้าสู่ระบบ</a>
 
                     <span class="padding_left0"></span> @if (Route::has('register'))<a href="{{ route('register') }}">Register</a>@endif
                     @endauth
@@ -67,12 +67,13 @@
               <div id="myNav" class="overlay">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content">
-                  <a href="{{ url('/') }}">Home</a>
-                  <a href="{{ url('services') }}">Services</a>
-                  <a href="{{ url('about') }}">About</a>
-                  <a href="{{ url('choose') }}">Choose</a>
-                  <a href="{{ url('team') }}">Team</a>
-                  <a href="{{ url('contact') }}">Contact Us</a>
+                <a href="{{ url('/') }}">หน้าแรก</a>
+                                        <a href="{{ url('/day1') }}">บันทึกความรู้สึก</a>
+                                        <a href="{{ url('services') }}">ประวัติบันทึกความรู้ศึก</a>
+                                        <a href="{{ url('about') }}">เกี่ยวกับ</a>
+                                        
+                                        <a href="{{ url('team') }}">ทีมผู้พัฒนา</a>
+                                        <a href="{{ url('contact') }}">ติดต่อสอบถาม</a>
                 </div>
               </div>
               <span class="navbar-toggler-icon"></span>
@@ -87,16 +88,16 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-5">
-            <h1 class="banner_taital">Best YOUR</h1>
-            <h1 class="banner_taital_1">house CLEAN</h1>
-            <p class="banner_text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim</p>
-            <div class="contact_bt"><a href="contact.html">CONTACT US<span class="contact_padding"><img src="images/contact-icon.png"></span></a></div>
+            <h1 class="banner_taital">Get to know</h1>
+            <h1 class="banner_taital_1">your ideas best</h1>
+            <p class="banner_text">Get rid of potential sensation problems.</p>
+            <div class="contact_bt"><a href="{{ url('/day1') }}">start <span class="contact_padding"><img src="images/contact-icon.png"></span></a></div>
           </div>
           <div class="col-sm-2">
             <div class="play_icon"><a href="#"><img src="images/play-icon.png"></a></div>
           </div>
           <div class="col-sm-5">
-            <div><img src="images/img-1.png" class="image_1"></div>
+            <div><img src="images/1.png" class="image_1"></div>
           </div>
         </div>
       </div>

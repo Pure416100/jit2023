@@ -40,7 +40,7 @@
     <!-- services section start -->
     <div class="services_section layout_padding">
       <div class="container">
-        <h1 class="services_taital"><span>Our</span> <img src="images/icon-1.png"> <span style="color: #1f1f1f">Services</span></h1>
+        <h1 class="services_taital"><span>ประวัติ</span> <img src="images/icon-1.png"> <span style="color: #1f1f1f">บันทึกความรู้ศึก</span></h1>
         <p class="services_text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         <div id="main_slider" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">

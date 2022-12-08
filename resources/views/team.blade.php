@@ -40,13 +40,13 @@
     <div class="team_section layout_padding">
       <div class="container">
         <h1 class="choose_taital"><span>Our </span> <img src="images/icon-1.png"> <span style="color: #1f1f1f">Team</span></h1>
-        <p class="choose_text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        <p class="choose_text">...</p>
         <div class="team_section_2 layout_padding">
           <div class="container">
             <div class="images_main_1">
               <div class="row">
                 <div class="col-sm-5">
-                  <div class="image_4"><img src="images/img-4.png"></div>
+                  <div class="image_4"><img src="images/dev1.png" width="160" height="160"></div>
                   <h6 class="follow_text">Follow Us</h6>
                   <div class="follow_social_icon">
                     <ul>
@@ -57,12 +57,17 @@
                     </ul>
                   </div>
                 </div>
+                
                 <div class="col-sm-7">
-                  <h2 class="consectetur_text">Consectetur</h2>
-                  <p class="dummy_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                  <h2 class="consectetur_text">นาย ภควัต นาเจิมพลอย</h2>
+                  <h2>Mr.Pakawat Najermploy</h2><hr>
+                  <p class="dummy_text">สาขาวิชาเทคโนโลยีสารสนเทศ<span> คณะวิทยาการสารสนเทศ</span><span> มหาวิทยาลัยมหาสารคาม</span></p>
+                  
                 </div>
-              </div>
+                
+              </div><hr>
             </div>
+
             <div class="images_main">
               <div class="row">
                 <div class="col-sm-7">

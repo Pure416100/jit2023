@@ -26,8 +26,8 @@ Route::get('/services', function () {
     return view('Services');
 });
 
-Route::get('/service', function () {
-    return view('Service');
+Route::get('/day1', function () {
+    return view('day1');
 });
 
 Route::get('/team', function () {

@@ -36,14 +36,13 @@
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-
 <body>
     <div id="app">
         <div class="header_section background_bg">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+                        <div class="logo"><a href="index.html"><img src="images/logo1.png"></a></div>
                     </div>
                     <div class="col-md-9">
                         <div class="menu_text">
@@ -53,12 +52,12 @@
                                     <div class="menu_main">
 
                                         <div class="padding_left0">
-                                            @auth
-                                            <a href="{{ url('/') }}">Home</a>
-                                            @else
-                                            <a href="{{ route('login') }}">Login</a>
+                                        @auth
+                    <a href="{{ url('/') }}">หน้าแรก</a>
+                    @else
+                    <a href="{{ route('login') }}">เข้าสู่ระบบ</a>
 
-                                            <span class="padding_left0"></span> @if (Route::has('register'))<a href="{{ route('register') }}">Register</a>@endif
+                                            <span class="padding_left0"></span> @if (Route::has('register'))<a href="{{ route('register') }}">ลงทะเบียน</a>@endif
                                             @endauth
                                         </div>
 
@@ -71,12 +70,13 @@
                                 <div id="myNav" class="overlay">
                                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                                     <div class="overlay-content">
-                                        <a href="{{ url('/') }}">Home</a>
-                                        <a href="{{ url('services') }}">Services</a>
-                                        <a href="{{ url('about') }}">About</a>
-                                        <a href="{{ url('choose') }}">Choose</a>
-                                        <a href="{{ url('team') }}">Team</a>
-                                        <a href="{{ url('contact') }}">Contact Us</a>
+                                        <a href="{{ url('/') }}">หน้าแรก</a>
+                                        <a href="{{ url('/day1') }}">บันทึกความรู้สึก</a>
+                                        <a href="{{ url('services') }}">ประวัติบันทึกความรู้ศึก</a>
+                                        <a href="{{ url('about') }}">เกี่ยวกับ</a>
+                                        
+                                        <a href="{{ url('team') }}">ทีมผู้พัฒนา</a>
+                                        <a href="{{ url('contact') }}">ติดต่อสอบถาม</a>
                                     </div>
                                 </div>
                                 <span class="navbar-toggler-icon"></span>
