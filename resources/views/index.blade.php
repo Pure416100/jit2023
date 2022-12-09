@@ -53,7 +53,7 @@
                     @else
                     <a href="{{ route('login') }}">เข้าสู่ระบบ</a>
 
-                    <span class="padding_left0"></span> @if (Route::has('register'))<a href="{{ route('register') }}">Register</a>@endif
+                    <span class="padding_left0"></span> @if (Route::has('register'))<a href="{{ route('register') }}">ลงทะเบียน</a>@endif
                     @endauth
                   </div>
 
@@ -70,8 +70,7 @@
                 <a href="{{ url('/') }}">หน้าแรก</a>
                                         <a href="{{ url('/day1') }}">บันทึกความรู้สึก</a>
                                         <a href="{{ url('services') }}">ประวัติบันทึกความรู้ศึก</a>
-                                        <a href="{{ url('about') }}">เกี่ยวกับ</a>
-                                        
+                                        <a href="{{ url('about') }}">เกี่ยวกับ</a> 
                                         <a href="{{ url('team') }}">ทีมผู้พัฒนา</a>
                                         <a href="{{ url('contact') }}">ติดต่อสอบถาม</a>
                 </div>

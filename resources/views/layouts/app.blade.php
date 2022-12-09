@@ -17,6 +17,7 @@
     <meta name="author" content="">
     <!-- bootstrap css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- style css -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Responsive-->
@@ -31,11 +32,12 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-    
+
 
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
+
 <body>
     <div id="app">
         <div class="header_section background_bg">
@@ -52,12 +54,12 @@
                                     <div class="menu_main">
 
                                         <div class="padding_left0">
-                                        @auth
-                    <a href="{{ url('/') }}">หน้าแรก</a>
-                    @else
-                    <a href="{{ route('login') }}">เข้าสู่ระบบ</a>
+                                            @auth
+                                            <a class="w3-button w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
+                                            @else
+                                            <a class="w3-button w3-hover-white" href="{{ route('login') }}">เข้าสู่ระบบ</a>
 
-                                            <span class="padding_left0"></span> @if (Route::has('register'))<a href="{{ route('register') }}">ลงทะเบียน</a>@endif
+                                            <span class="padding_left0"></span> @if (Route::has('register'))<a class="w3-button w3-hover-white" href="{{ route('register') }}">ลงทะเบียน</a>@endif
                                             @endauth
                                         </div>
 
@@ -67,16 +69,19 @@
                                     @endif
                                     <div class="shoping_bag"><img src="images/search-icon.png"></div>
                                 </div>
-                                <div id="myNav" class="overlay">
+                                <div id="myNav" class="overlay w3-hover-blue">
                                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                    
                                     <div class="overlay-content">
-                                        <a href="{{ url('/') }}">หน้าแรก</a>
-                                        <a href="{{ url('/day1') }}">บันทึกความรู้สึก</a>
-                                        <a href="{{ url('services') }}">ประวัติบันทึกความรู้ศึก</a>
-                                        <a href="{{ url('about') }}">เกี่ยวกับ</a>
-                                        
-                                        <a href="{{ url('team') }}">ทีมผู้พัฒนา</a>
-                                        <a href="{{ url('contact') }}">ติดต่อสอบถาม</a>
+                                    <div>
+                                        <a class=" w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
+                                        <a class=" w3-hover-white" href="{{ url('/day1') }}">บันทึกความรู้สึก</a>
+                                        <a class=" w3-hover-white" href="{{ url('services') }}">ประวัติบันทึกความรู้ศึก</a>
+                                        <a class=" w3-hover-white" href="{{ url('about') }}">เกี่ยวกับ</a>
+
+                                        <a class=" w3-hover-white" href="{{ url('team') }}">ทีมผู้พัฒนา</a>
+                                        <a class=" w3-hover-white" href="{{ url('contact') }}">ติดต่อสอบถาม</a>
+                                    </div>
                                     </div>
                                 </div>
                                 <span class="navbar-toggler-icon"></span>
