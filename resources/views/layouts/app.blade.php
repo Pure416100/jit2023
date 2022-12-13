@@ -11,7 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Contact</title>
+    <title>Jitdee</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo1.1.png">
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -36,6 +37,7 @@
 
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+  
 </head>
 
 <body>
@@ -44,7 +46,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="logo"><a href="index.html"><img src="images/logo1.png"></a></div>
+                        <div class="logo"><a href="{{ url('/') }}"><img src="images/logo1.png"></a></div>
                     </div>
                     <div class="col-md-9">
                         <div class="menu_text">
@@ -55,11 +57,11 @@
 
                                         <div class="padding_left0">
                                             @auth
-                                            <a class="w3-button w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
+                                            <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
                                             @else
-                                            <a class="w3-button w3-hover-white" href="{{ route('login') }}">เข้าสู่ระบบ</a>
+                                            <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('login') }}">เข้าสู่ระบบ</a>
 
-                                            <span class="padding_left0"></span> @if (Route::has('register'))<a class="w3-button w3-hover-white" href="{{ route('register') }}">ลงทะเบียน</a>@endif
+                                            <span class="padding_left0"></span> @if (Route::has('register'))<a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('register') }}">ลงทะเบียน</a>@endif
                                             @endauth
                                         </div>
 
@@ -67,21 +69,21 @@
 
                                     </div>
                                     @endif
-                                    <div class="shoping_bag"><img src="images/search-icon.png"></div>
+
                                 </div>
                                 <div id="myNav" class="overlay w3-hover-blue">
                                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                                    
-                                    <div class="overlay-content">
-                                    <div>
-                                        <a class=" w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
-                                        <a class=" w3-hover-white" href="{{ url('/day1') }}">บันทึกความรู้สึก</a>
-                                        <a class=" w3-hover-white" href="{{ url('services') }}">ประวัติบันทึกความรู้ศึก</a>
-                                        <a class=" w3-hover-white" href="{{ url('about') }}">เกี่ยวกับ</a>
 
-                                        <a class=" w3-hover-white" href="{{ url('team') }}">ทีมผู้พัฒนา</a>
-                                        <a class=" w3-hover-white" href="{{ url('contact') }}">ติดต่อสอบถาม</a>
-                                    </div>
+                                    <div class="overlay-content ">
+                                    <div class="container">
+                                        <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
+                                        <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/day1') }}">บันทึกความรู้สึก</a>
+                                        <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('services') }}">ประวัติบันทึกความรู้ศึก</a>
+                                        <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('about') }}">เกี่ยวกับ</a>
+
+                                        <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('team') }}">ทีมผู้พัฒนา</a>
+                                        <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('contact') }}">ติดต่อสอบถาม</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <span class="navbar-toggler-icon"></span>

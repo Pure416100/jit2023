@@ -29,6 +29,18 @@ Route::get('/services', function () {
 Route::get('/day1', function () {
     return view('day1');
 });
+Route::get('/day2', function () {
+    return view('day2');
+});
+Route::get('/day3', function () {
+    return view('day3');
+});
+Route::get('/day4', function () {
+    return view('day4');
+});
+Route::get('/day5', function () {
+    return view('day5');
+});
 
 Route::get('/team', function () {
     return view('team');

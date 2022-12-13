@@ -11,7 +11,7 @@
         cursor: pointer
     }
 
-
+  
 </style>
 
 @section('content')
@@ -142,7 +142,7 @@
                                 </div>
                                 <br>
                                 <div class="col-12">
-                                    <a class="btn btn-primary w-100 py-3" type="submit" onclick="return confirm('กรุณายืนยันการบันทึกข้อมูล??')" href="{{url('/day2')}}">บันทึก</a>
+                                <a class="btn btn-primary w-100 py-3" type="submit" onclick="return confirm('กรุณายืนยันการบันทึกข้อมูล??')" href="{{url('/day6')}}">บันทึก</a>
 
                                 </div>
                             </div>

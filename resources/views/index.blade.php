@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <!-- site metas -->
-  <title>Capiclean</title>
+  <title>Jitdee</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -38,7 +38,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3">
-          <div class="logo"><a href="index.html"><img src="images/logo1.png"></a></div>
+        <div class="logo"><a href="{{ url('/') }}"><img src="images/logo1.png"></a></div>
         </div>
         <div class="col-md-9">
           <div class="menu_text">
