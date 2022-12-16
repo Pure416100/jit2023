@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,6 +26,21 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function profile_update(Request $request)
+    {
+        
+
+        $user = Auth::user()->id;
+        $update = User::findOrFail($user);
+        $update->username = $request->input('username');
+        $update->email = $request->input('email');
+        
+
+        $update->update();;
+       
+        return redirect('/profile')->with('Success', "อัพเดตข้อมูลเรียบร้อย");
     }
 
     public function GoogleCallback()

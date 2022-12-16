@@ -30,7 +30,7 @@
             <div class="col-md-6">
               <div class="map_main">
                 <div class="map-responsive">
-                  <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="280" frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3831.4138222613483!2d103.28263481486015!3d16.19915158880074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3122a6a3a1bfc96d%3A0x901c5b0f2d94761!2z4LmC4Lij4LiH4Lie4Lii4Liy4Lia4Liy4Lil4Liq4Li44LiX4LiY4Liy4LmA4Lin4LiKIOC4hOC4k-C4sOC5geC4nuC4l-C4ouC4qOC4suC4quC4leC4o-C5jCDguKHguKvguLLguKfguLTguJfguKLguLLguKXguLHguKLguKHguKvguLLguKrguLLguKPguITguLLguKE!5e0!3m2!1sth!2sth!4v1671184725932!5m2!1sth!2sth"  width="600" height="280" frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
                 </div>
               </div>
               <div class="social_icon">

@@ -59,6 +59,7 @@
                       @csrf
                     </form>
                     @else
+                  
                     <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('login') }}">เข้าสู่ระบบ</a>
 
                     <span class="padding_left0"></span> @if (Route::has('register'))<a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('register') }}">ลงทะเบียน</a>@endif
@@ -78,7 +79,8 @@
                   <div class="container">
                     @auth
                     <h3 class="w3-text-white">ยินดีตอนรับ</h3>
-                    <h5 class="w3-text-white">{{ Auth::user()->username }}</h5>
+                    <h1 class="w3-text-white">{{ Auth::user()->username }}</h1>
+                    <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/profile') }}">ข้อมูลส่วนตัว</a>
                     <hr>
                     <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
 
@@ -94,10 +96,10 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                       @csrf
                     </form>
-                    @else
+                    @else  
+                    <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
                     <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('login') }}">เข้าสู่ระบบ</a>
-
-                    <span class="padding_left0"></span> @if (Route::has('register'))<a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('register') }}">ลงทะเบียน</a>@endif
+                    @if (Route::has('register'))<a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('register') }}">ลงทะเบียน</a>@endif
                     @endauth
 
                   </div>
@@ -273,24 +275,28 @@
         <div class="container">
           <div class="images_main_1">
             <div class="row">
-              <div class="col-sm-5">
-                <div class="image_4"><img src="images/img-4.png"></div>
-                <h6 class="follow_text">Follow Us</h6>
-                <div class="follow_social_icon">
-                  <ul>
-                    <li><a href="#"><img src="images/fb-icon.png"></a></li>
-                    <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-                    <li><a href="#"><img src="images/linkden-icon.png"></a></li>
-                    <li><a href="#"><img src="images/instagram-icon.png"></a></li>
-                  </ul>
+            <div class="col-sm-5">
+                  <div class="image_4"><img src="images/dev1.png" width="160" height="160"></div>
+                  <h6 class="follow_text">Follow Us</h6>
+                  <div class="follow_social_icon">
+                    <ul>
+                      <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                      <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                      <li><a href="#"><img src="images/linkden-icon.png"></a></li>
+                      <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-7">
-                <h2 class="consectetur_text">Consectetur</h2>
-                <p class="dummy_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
-              </div>
+                
+                <div class="col-sm-7">
+                  <h2 class="consectetur_text">นาย ภควัต นาเจิมพลอย</h2>
+                  <h2>Mr.Pakawat Najermploy</h2><hr>
+                  <p class="dummy_text">สาขาวิชาเทคโนโลยีสารสนเทศ<span> คณะวิทยาการสารสนเทศ</span><span> มหาวิทยาลัยมหาสารคาม</span></p>
+                  
+                </div>
+                
+              </div><hr>
             </div>
-          </div>
           <div class="images_main">
             <div class="row">
               <div class="col-sm-7">
@@ -366,8 +372,8 @@
         </div>
         <div class="col-md-6">
           <div class="mail_bt_main">
-            <input type="text" class="mail_text" placeholder="ENTER YOUR MAIL" name="Enter Tour Mail">
-            <div class="subscribe_bt"><a href="#">SUBSCRIBE</a></div>
+            <input type="email" class="mail_text" placeholder="ENTER YOUR MAIL" name="Enter Tour Mail">
+            <div class="subscribe_bt"><a href="{{ route('password.email') }}">SUBSCRIBE</a></div>
           </div>
         </div>
       </div>
@@ -405,7 +411,7 @@
           <div class="col-md-6">
             <div class="map_main">
               <div class="map-responsive">
-                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="280" frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3831.4138222613483!2d103.28263481486015!3d16.19915158880074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3122a6a3a1bfc96d%3A0x901c5b0f2d94761!2z4LmC4Lij4LiH4Lie4Lii4Liy4Lia4Liy4Lil4Liq4Li44LiX4LiY4Liy4LmA4Lin4LiKIOC4hOC4k-C4sOC5geC4nuC4l-C4ouC4qOC4suC4quC4leC4o-C5jCDguKHguKvguLLguKfguLTguJfguKLguLLguKXguLHguKLguKHguKvguLLguKrguLLguKPguITguLLguKE!5e0!3m2!1sth!2sth!4v1671184725932!5m2!1sth!2sth"  width="600" height="280" frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
               </div>
             </div>
             <div class="social_icon">

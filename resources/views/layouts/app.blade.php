@@ -43,6 +43,7 @@
 
 
 
+
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
 </head>
@@ -72,6 +73,7 @@
                                                 @csrf
                                             </form>
                                             @else
+
                                             <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('login') }}">เข้าสู่ระบบ</a>
 
                                             <span class="padding_left0"></span> @if (Route::has('register'))<a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('register') }}">ลงทะเบียน</a>@endif
@@ -91,7 +93,8 @@
                                         <div class="container">
                                             @auth
                                             <h3 class="w3-text-white">ยินดีตอนรับ</h3>
-                                            <h5 class="w3-text-white">{{ Auth::user()->username }}</h5>
+                                            <h3 class="w3-text-white">{{ Auth::user()->username }}</h3>
+                                            <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/profile') }}">ข้อมูลส่วนตัว</a>
                                             <hr>
                                             <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
 
@@ -108,9 +111,9 @@
                                                 @csrf
                                             </form>
                                             @else
+                                            <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
                                             <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('login') }}">เข้าสู่ระบบ</a>
-
-                                            <span class="padding_left0"></span> @if (Route::has('register'))<a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('register') }}">ลงทะเบียน</a>@endif
+                                            @if (Route::has('register'))<a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('register') }}">ลงทะเบียน</a>@endif
                                             @endauth
 
                                         </div>

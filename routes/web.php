@@ -40,6 +40,11 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/email', function () {
+    return view('email');
+});
+
+
 Route::get('/about', function () {
     return view('about');
 })->middleware('auth');
@@ -73,11 +78,15 @@ Route::get('/choose', function () {
     return view('choose');
 });
 
+Route::get('/profile', function () {
+    return view('profile');
+});
+
 Auth::routes();
 
 Route::get('GoogleCallbacks', [App\Http\Controllers\HomeController::class, 'GoogleCallback']);
 Route::post('ajaxRequestPost', [App\Http\Controllers\SocialAuthLoginController::class, 'ajaxRequestPost'])->name('ajaxRequest.post');
 Route::post('ajaxRequestPost2', [App\Http\Controllers\SocialAuthLoginController::class, 'ajaxRequestPost2'])->name('ajaxRequest2.post');
 
-
+Route::post('/profile-update', [App\Http\Controllers\HomeController::class, 'profile_update'])->name('profile-update');
 
