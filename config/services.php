@@ -31,4 +31,16 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'facebook' => [
+        'client_id' => env('2143325035838322'),
+        'client_secret' =>env( '44c5bf0a0cc1d2d57e9a6c4facb6a686'),
+        'redirect'      => env('https://localhost:8000/social-login/facebook/callback'),
+    ],
+    'google' => [
+        'client_id'     => env('580575413120-ik1n844f30e5nlesh5m0a1h732ec5r67.apps.googleusercontent.com'),
+        'client_secret' => env('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'),
+        'redirect'      => env('https://localhost:8000/social-login/google/callback'),
+    ],
+
+
 ];

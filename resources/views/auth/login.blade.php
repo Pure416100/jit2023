@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<!-- basic -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- mobile metas -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-<!-- site metas -->
-<title>Login</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content=""> 
-<!-- bootstrap css -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<!-- style css -->
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<!-- Responsive-->
-<link rel="stylesheet" href="css/responsive.css">
-<!-- fevicon -->
-<link rel="icon" href="images/fevicon.png" type="image/gif" />
-<!-- Scrollbar Custom CSS -->
-<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-<!-- Tweaks for older IEs-->
-<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-<!-- owl stylesheets --> 
-<link rel="stylesheet" href="css/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owl.theme.default.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Login</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- owl stylesheets -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+<!-- Custom styles for this template-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   
+    
 
 </head>
 @section('content')
+
 <body>
-  
-@extends('layouts.app')
-<div class="choose_section layout_padding">
-      <div class="container">
-       
+
+    @extends('layouts.app')
+    <div class="choose_section layout_padding">
+        <div class="container">
+
 
             <div class="card o-hidden border-0 shadow-lg my-5 bg-grey">
                 <div class="card-body p-0">
@@ -48,11 +56,9 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="p-5">
-                               
-                                 
-                                    <h1 ><span>Welcome {{ __('Login') }}!</span></h1>
-                              
-
+                                <div class="text-center ">
+                                    <h4>Welcome {{ __('Login') }}!</h4>
+                                </div>
 
                                 <div class="card-body">
                                     <form method="POST" action="{{ route('login') }}">
@@ -68,10 +74,10 @@
                                         @endif
 
                                         <div class="row mb-3">
-                                            
+                                            <label for="email" class="col-md-4 col-form-label text-md-end">{{('ชื่อผู้ใช้ หรือ อีเมล์')}}</label>
 
                                             <div class="col-md-6">
-                                                <input id="email" type="text" class="email_text" name="email" placeholder="Phone Number" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                                <input id="email" type="text" placeholder="email & username" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                                 @error('email')
                                                 <span class="invalid-feedback" role="alert">
@@ -82,10 +88,10 @@
                                         </div>
 
                                         <div class="row mb-3">
-                                           
+                                            <label for="password" class="col-md-4 col-form-label text-md-end">{{('รหัสผ่าน')}}</label>
 
                                             <div class="col-md-6">
-                                                <input id="password" type="password" class="email_text" name="password" placeholder="password" required autocomplete="current-password">
+                                                <input id="password" type="password" placeholder="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                                 @error('password')
                                                 <span class="invalid-feedback" role="alert">
@@ -95,10 +101,8 @@
                                             </div>
                                         </div>
 
-                                        <div class="row mb-3">
-                                           
-
-                                            <div class="col-md-6">
+                                        <div class="row mb-3 ">
+                                            <div class="col-md-6 offset-md-4">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -108,10 +112,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row mb-3">
-                                           
 
-                                           <div class="col-md-6">
+                                        <div class="row mb-0">
+                                            <div class="col-md-8 offset-md-4">
                                                 <button type="submit" class="btn btn-primary">
                                                     {{ __('เข้าสู่ระบบ') }}
                                                 </button>
@@ -126,9 +129,205 @@
 
                                     </form>
 
-                                   
-                                    
-                      
+                                    <hr>
+                                    <div class="col-md-8 offset-md-4">
+
+                                        <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+
+
+                                        <div id="g_id_onload" data-client_id="580575413120-ik1n844f30e5nlesh5m0a1h732ec5r67.apps.googleusercontent.com" data-callback="handleCredentialResponse">
+                                        </div>
+                                        <div class="g_id_signin" data-type="standard" data-size="large" data-theme="filled_black" data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left"></div>
+
+
+
+
+                                    </div>
+                                    <script>
+                                        function statusChangeCallback(response) { // Called with the results from FB.getLoginStatus().
+                                            console.log('statusChangeCallback');
+                                            console.log(response); // The current login status of the person.
+                                            if (response.status === 'connected') { // Logged into your webpage and Facebook.
+                                                testAPI();
+                                            } else { // Not logged into your webpage or we are unable to tell.
+                                                document.getElementById('status').innerHTML = 'Please log ' +
+                                                    'into this webpage.';
+                                            }
+                                        }
+
+
+                                        function checkLoginState() { // Called when a person is finished with the Login Button.
+                                            FB.getLoginStatus(function(response) { // See the onlogin handler
+                                                statusChangeCallback(response);
+                                            });
+                                        }
+
+
+                                        window.fbAsyncInit = function() {
+                                            FB.init({
+                                                appId: '2143325035838322',
+                                                cookie: true, // Enable cookies to allow the server to access the session.
+                                                xfbml: true, // Parse social plugins on this webpage.
+                                                version: 'v14.0' // Use this Graph API version for this call.
+                                            });
+
+
+                                            FB.getLoginStatus(function(response) { // Called after the JS SDK has been initialized.
+                                                statusChangeCallback(response); // Returns the login status.
+                                            });
+                                        };
+
+                                        function testAPI() { // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+                                            console.log('Welcome!  Fetching your information.... ');
+                                            FB.api('/me', function(response) {
+                                                console.log("last data-->", response);
+                                                console.log('Successful login for: ' + response.name);
+                                                document.getElementById('status').innerHTML =
+                                                    'Thanks for logging in, ' + response.name + '!';
+
+                                            });
+                                        }
+
+                                        function parseJwt(token) {
+                                            var base64Url = token.split('.')[1];
+                                            var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                                            var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+                                                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                                            }).join(''));
+
+                                            return JSON.parse(jsonPayload);
+                                        }
+
+                                        function handleCredentialResponse(response) {
+                                            console.log(response);
+                                            console.log("Encoded JWT ID token: " + response.credential);
+                                            const decoded = parseJwt(response.credential);
+                                            console.log("DECODED-->", decoded);
+
+                                            // $.ajax({
+                                            //     type :"get",
+                                            //     url : location.origin+"/google/"+response.credential.split(".")[1],
+
+                                            $.ajax({
+                                                    type: "post",
+                                                    url: location.origin + "/ajaxRequestPost",
+                                                    data: decoded
+                                                })
+                                                .done((response) => {
+                                                    console.log("Google login response-->", response);
+                                                    location.href = location.origin + "/";
+                                                });
+
+                                        }
+                                        window.onload = function() {
+                                            google.accounts.id.initialize({
+                                                client_id: "580575413120-ik1n844f30e5nlesh5m0a1h732ec5r67.apps.googleusercontent.com",
+                                                callback: handleCredentialResponse
+                                            });
+                                            google.accounts.id.renderButton(
+                                                document.getElementById("buttonDiv"), {
+                                                    theme: "outline",
+                                                    size: "large"
+                                                } // customization attributes
+                                            );
+                                            google.accounts.id.prompt(); // also display the One Tap dialog
+
+                                            $.ajaxSetup({
+                                                headers: {
+                                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                                }
+                                            });
+                                        }
+                                    </script>
+                                    <br>
+                                    <div class="col-md-8 offset-md-4">
+
+                                        <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState();"></div>
+
+                                        <script>
+                                            function statusChangeCallback(response) { // Called with the results from FB.getLoginStatus().
+                                                console.log('statusChangeCallback');
+                                                console.log(response); // The current login status of the person.
+                                                if (response.status === 'connected') { // Logged into your webpage and Facebook.
+                                                    testAPI();
+                                                } else { // Not logged into your webpage or we are unable to tell.
+                                                    document.getElementById('status').innerHTML = 'Please log ' +
+                                                        'into this webpage.';
+                                                }
+                                            }
+
+
+
+                                            function checkLoginState() { // Called when a person is finished with the Login Button.
+                                                FB.getLoginStatus(function(response) { // See the onlogin handler
+                                                    statusChangeCallback(response);
+                                                });
+
+
+                                            }
+
+
+
+                                            window.fbAsyncInit = function() {
+                                                FB.init({
+                                                    appId: '2143325035838322',
+                                                    cookie: true, // Enable cookies to allow the server to access the session.
+                                                    xfbml: true, // Parse social plugins on this webpage.
+                                                    version: 'v14.0' // Use this Graph API version for this call.
+                                                });
+
+
+                                                FB.getLoginStatus(function(response) { // Called after the JS SDK has been initialized.
+                                                    statusChangeCallback(response); // Returns the login status.
+                                                });
+                                            };
+
+                                            function testAPI() { // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+                                                console.log('Welcome!  Fetching your information.... ');
+                                                FB.api('/me', {
+                                                    locale: 'en_US',
+                                                    fields: 'id,name,first_name,last_name,email,link,gender,locale,picture'
+                                                }, function(response) {
+                                                    console.log("last data-->", response);
+                                                    console.log('Successful login for: ' + response.name);
+
+                                                    $.ajax({
+                                                            type: "post",
+                                                            url: location.origin + "/ajaxRequestPost2",
+                                                            data: response
+                                                        })
+                                                        .done((response) => {
+                                                            console.log("facebook login response-->", response);
+                                                            location.href = location.origin + "/";
+                                                        });
+
+                                                });
+
+                                            }
+                                        </script>
+
+                                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
 </body>
+
 </html>
 @endsection

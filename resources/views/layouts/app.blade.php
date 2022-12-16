@@ -33,11 +33,18 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-  
+
 </head>
 
 <body>
@@ -57,7 +64,13 @@
 
                                         <div class="padding_left0">
                                             @auth
+
                                             <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
+                                            <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('logout') }}" onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">ออกจากระบบ</a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
                                             @else
                                             <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('login') }}">เข้าสู่ระบบ</a>
 
@@ -75,14 +88,31 @@
                                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
                                     <div class="overlay-content ">
-                                    <div class="container">
-                                        <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
-                                        <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/day1') }}">บันทึกความรู้สึก</a>
-                                        <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('services') }}">ประวัติบันทึกความรู้ศึก</a>
-                                        <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('about') }}">เกี่ยวกับ</a>
+                                        <div class="container">
+                                            @auth
+                                            <h3 class="w3-text-white">ยินดีตอนรับ</h3>
+                                            <h5 class="w3-text-white">{{ Auth::user()->username }}</h5>
+                                            <hr>
+                                            <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
 
-                                        <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('team') }}">ทีมผู้พัฒนา</a>
-                                        <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('contact') }}">ติดต่อสอบถาม</a>
+                                            <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/day1') }}">บันทึกความรู้สึก</a>
+                                            <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('services') }}">ประวัติบันทึกความรู้ศึก</a>
+                                            <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('about') }}">เกี่ยวกับ</a>
+
+                                            <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('team') }}">ทีมผู้พัฒนา</a>
+                                            <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('contact') }}">ติดต่อสอบถาม</a>
+                                            <hr>
+                                            <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">ออกจากระบบ</a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
+                                            @else
+                                            <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('login') }}">เข้าสู่ระบบ</a>
+
+                                            <span class="padding_left0"></span> @if (Route::has('register'))<a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ route('register') }}">ลงทะเบียน</a>@endif
+                                            @endauth
+
                                         </div>
                                     </div>
                                 </div>

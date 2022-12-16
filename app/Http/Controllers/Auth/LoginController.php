@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -36,5 +39,44 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+
+    public function login(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required',
+            'password' => 'required|min:6'
+        ]);
+
+        $email = $request->get('email');
+        $password = $request->get('password');
+
+        $login_type = filter_var($email, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+
+        if (Auth::attempt([$login_type => $email, 'password' => $password])) {
+            //Auth successful here
+            return redirect()->intended($this->redirectPath());
+        }
+
+
+        return redirect()->back()
+            ->withInput()
+            ->with([
+                'error' => 'ไม่สามารถเข้าระบบได้ ข้อมูลไม่ถูกต้อง.',
+            ]);
+    }
+    public function redirectTo()
+    {
+       
+       
+        {
+            return ('/');
+        }
+    }
+
+    public function username()
+    {
+        return 'username';
     }
 }
