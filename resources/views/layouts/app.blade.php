@@ -40,21 +40,18 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-
-
+    
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
 </head>
 
 <body>
     <div id="app">
-        <div class="header_section background_bg">
+        <div class="header_section background_bg fixed-top">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="logo"><a href="{{ url('/') }}"><img src="images/logo1.png"></a></div>
+                        <div class="logo"><a href="{{ url('/') }}"><img src="images/logo1.png" width="150" height="150"></a></div>
                     </div>
                     <div class="col-md-9">
                         <div class="menu_text">

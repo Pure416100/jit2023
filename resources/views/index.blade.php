@@ -38,7 +38,7 @@
 <body>
   <!--header section start -->
   <div class="header_section">
-    <div class="container-fluid">
+    <div class="container-fluid ">
       <div class="row">
         <div class="col-md-3">
           <div class="logo"><a href="{{ url('/') }}"><img src="images/logo1.png"></a></div>
@@ -217,10 +217,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <div><img src="images/img-2.png" class="image_2"></div>
+          <div><img src="images/011.png" class="card bg-info" width="250" height="250"></div>
         </div>
         <div class="col-md-6">
-          <h1 class="services_taital"><span>About </span> <img src="images/icon-1.png"> <span style="color: #1f1f1f">Cleaning</span></h1>
+          <h1 class="services_taital"><span>About </span> <img src="images/icon-1.png"> <span style="color: #1f1f1f">jitdee</span></h1>
           <p class="ipsum_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
           <div class="contact_bt_1"><a href="#">READ MORE<span class="contact_padding"><img src="images/contact-icon1.png"></span></a></div>
         </div>
@@ -228,44 +228,7 @@
     </div>
   </div>
   <!-- about section end -->
-  <!-- choose section start -->
-  <div class="choose_section layout_padding">
-    <div class="container">
-      <h1 class="choose_taital"><span>Why </span> <img src="images/icon-1.png"> <span style="color: #1f1f1f">Choose Us</span></h1>
-      <p class="choose_text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-      <div class="choose_section_2 layout_padding">
-        <div class="row">
-          <div class="col-lg-3 col-sm-6">
-            <div class="choose_box">
-              <h1 class="client_taital">12004+</h1>
-              <h4 class="client_text">Our clients</h4>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="choose_box">
-              <h1 class="client_taital">10004+</h1>
-              <h4 class="client_text">Happy clients</h4>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="choose_box">
-              <h1 class="client_taital">804+</h1>
-              <h4 class="client_text">Supports</h4>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="choose_box">
-              <h1 class="client_taital">905+</h1>
-              <h4 class="client_text">Awards</h4>
-            </div>
-          </div>
-        </div>
-        <div class="image_3"><img src="images/img-3.png"></div>
-        <div class="get_bt"><a href="#">Get A quote</a></div>
-      </div>
-    </div>
-  </div>
-  <!-- choose section end -->
+ 
   <!-- team section start -->
   <div class="team_section layout_padding">
     <div class="container">
@@ -276,7 +239,7 @@
           <div class="images_main_1">
             <div class="row">
             <div class="col-sm-5">
-                  <div class="image_4"><img src="images/dev1.png" width="160" height="160"></div>
+                  <div class="image_4"><img src="images/dev1.png" width="190" height="190"></div>
                   <h6 class="follow_text">Follow Us</h6>
                   <div class="follow_social_icon">
                     <ul>
@@ -290,7 +253,7 @@
                 
                 <div class="col-sm-7">
                   <h2 class="consectetur_text">นาย ภควัต นาเจิมพลอย</h2>
-                  <h2>Mr.Pakawat Najermploy</h2><hr>
+                  <h2 class="consectetur_text">Mr.Pakawat Najermploy</h2>
                   <p class="dummy_text">สาขาวิชาเทคโนโลยีสารสนเทศ<span> คณะวิทยาการสารสนเทศ</span><span> มหาวิทยาลัยมหาสารคาม</span></p>
                   
                 </div>
@@ -300,11 +263,12 @@
           <div class="images_main">
             <div class="row">
               <div class="col-sm-7">
-                <h2 class="consectetur_text_1">magna aliqua</h2>
-                <p class="dummy_text_1">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                <h2 class="consectetur_text_1">นายภูวนาท ประทุมวัน</h2>
+                <h2 class="consectetur_text_1">Mr.Phuwanart Pratumwan</h2>
+                <p class="dummy_text_1">สาขาวิชาเทคโนโลยีสารสนเทศ<span> คณะวิทยาการสารสนเทศ</span><span> มหาวิทยาลัยมหาสารคาม</span></p>
               </div>
               <div class="col-sm-5">
-                <div class="image_4"><img src="images/img-5.png"></div>
+                <div class="image_4"><img src="images/dev2.png" width="190" height="190"></div>
                 <h6 class="follow_text">Follow Us</h6>
                 <div class="follow_social_icon">
                   <ul>
@@ -320,7 +284,7 @@
           <div class="images_main_1">
             <div class="row">
               <div class="col-sm-5">
-                <div class="image_4"><img src="images/img-6.png"></div>
+                <div class="image_4"><img src="images/dev3.png" width="150" height="150"></div>
                 <h6 class="follow_text">Follow Us</h6>
                 <div class="follow_social_icon">
                   <ul>
@@ -332,31 +296,13 @@
                 </div>
               </div>
               <div class="col-sm-7">
-                <h2 class="consectetur_text">Aonsectetur</h2>
-                <p class="dummy_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                <h2 class="consectetur_text">นางสาว จุฑามาศ หาสุข</h2>
+                <h2 class="consectetur_text">Miss.Juthamas Hasuk</h2>
+                <p class="dummy_text">สาขาวิชาเทคโนโลยีสารสนเทศ<span> คณะวิทยาการสารสนเทศ</span><span> มหาวิทยาลัยมหาสารคาม</span></p>
               </div>
             </div>
           </div>
-          <div class="images_main">
-            <div class="row">
-              <div class="col-sm-7">
-                <h2 class="consectetur_text_1">Nonsectetur</h2>
-                <p class="dummy_text_1">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
-              </div>
-              <div class="col-sm-5">
-                <div class="image_4"><img src="images/img-7.png"></div>
-                <h6 class="follow_text">Follow Us</h6>
-                <div class="follow_social_icon">
-                  <ul>
-                    <li><a href="#"><img src="images/fb-icon.png"></a></li>
-                    <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-                    <li><a href="#"><img src="images/linkden-icon.png"></a></li>
-                    <li><a href="#"><img src="images/instagram-icon.png"></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        
         </div>
       </div>
     </div>

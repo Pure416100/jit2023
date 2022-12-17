@@ -47,7 +47,7 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">{{ __('Reset password') }}</h1>
+                                        <h1 class="row mb-0 mb-4">{{ __('กรอกอีเมลเพื่อเปลี่ยนรหัสผ่าน') }}</h1>
                                        
 
 
@@ -58,7 +58,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('กรอกอีเมล์') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" placeholder="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">

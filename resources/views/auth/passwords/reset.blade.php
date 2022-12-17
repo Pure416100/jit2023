@@ -47,7 +47,7 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">{{ __('Reset password') }}</h1>
+                                        <h1 class="row mb-0 mb-4">{{ __('เปลี่ยนรหัสผ่านใหม่ของคุณ') }}</h1>
                                        
 
 
@@ -60,7 +60,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('กรอกอีเมล์') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email"  placeholder="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -74,7 +74,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('กรอกรหัสผ่าน') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password"  placeholder="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -88,7 +88,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('กรอกรหัสผ่านใหม่อีกครั้ง') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password"  placeholder="password confirm" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 

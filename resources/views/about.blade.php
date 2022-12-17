@@ -42,7 +42,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <div><img src="images/1.png" class="image_2"></div>
+            <div><img src="images/011.png" class="card bg-info" width="250" height="250"></div>
           </div>
           <div class="col-md-6">
             <h1 class="services_taital"><span>เกี่ยวกับเรา </span> <img src="images/icon-1.png"> <span style="color: #1f1f1f">xxxxxx</span></h1>
