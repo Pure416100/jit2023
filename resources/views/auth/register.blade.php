@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row justify-content-center">
 
-            <div class="card o-hidden border-0 shadow-lg my-5 bg-light grey">
+        <div class=" card text-center w3-container  w3-white w3-round w3-margin">
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
