@@ -136,7 +136,7 @@
 
 
 
-                                        <div id="g_id_onload" data-client_id="580575413120-ik1n844f30e5nlesh5m0a1h732ec5r67.apps.googleusercontent.com" data-callback="handleCredentialResponse">
+                                        <div id="g_id_onload" data-client_id="726831138738-ahftk5eed78007jojd3vugni1qt1rpmr.apps.googleusercontent.com" data-callback="handleCredentialResponse">
                                         </div>
                                         <div class="g_id_signin" data-type="standard" data-size="large" data-theme="filled_black" data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left"></div>
 
@@ -222,7 +222,7 @@
                                         }
                                         window.onload = function() {
                                             google.accounts.id.initialize({
-                                                client_id: "580575413120-ik1n844f30e5nlesh5m0a1h732ec5r67.apps.googleusercontent.com",
+                                                client_id: "726831138738-ahftk5eed78007jojd3vugni1qt1rpmr.apps.googleusercontent.com",
                                                 callback: handleCredentialResponse
                                             });
                                             google.accounts.id.renderButton(

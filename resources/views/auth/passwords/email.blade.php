@@ -42,10 +42,17 @@
                 <div class="card o-hidden border-0 shadow-lg my-5 bg-light grey">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
+                       
+
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block bg-login-image"><img class="w3-image" src="/images/1.png" alt="student dp" width="400" height="450"></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
+                                     @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                                     <div class="text-center">
                                         <h1 class="row mb-0 mb-4">{{ __('กรอกอีเมลเพื่อเปลี่ยนรหัสผ่าน') }}</h1>
                                        

@@ -37,8 +37,8 @@ return [
         'redirect'      => env('https://localhost:8000/social-login/facebook/callback'),
     ],
     'google' => [
-        'client_id'     => env('580575413120-ik1n844f30e5nlesh5m0a1h732ec5r67.apps.googleusercontent.com'),
-        'client_secret' => env('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'),
+        'client_id'     => env('726831138738-ahftk5eed78007jojd3vugni1qt1rpmr.apps.googleusercontent.com'),
+        'client_secret' => env('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'),
         'redirect'      => env('https://localhost:8000/social-login/google/callback'),
     ],
 
