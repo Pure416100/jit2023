@@ -62,26 +62,27 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 
-
+input[type="radio"].form-check-input {
+  border-radius: 50%;
+}
+input[type=radio]{
+  transform:scale(1.5);
+}
 </style>
 
 @section('content')
 
 <body>
-  
   @extends('layouts.app')
- 
   <!-- Comment Form Start -->
   <div class="about_section layout_padding">
     <div class="container">
-      <div class="card o-hidden border-0 shadow-lg my-5  w3-theme-l4">
-        <div class="card-body p-0">
-          <!-- Nested Row within Card Body -->
+      <div class="card bg-grey">
+        <div class="card-body">
           <div class="p-5">
-            <div class="text-center">
-              <div class="w3-content w3-display-container">
+           
                 <div class="mySlides">
-
+ <div class="text-center">
                   <!-- Nested Row within Card Body -->
                   <label class="choose_taital"><span
                       class="badge rounded-pill bg-info">บันทึกความรู้สึก<span></span></label><br><br>
@@ -95,21 +96,54 @@ img {vertical-align: middle;}
                         );
                       </script>
                     </span></h1>
-
+ </div>
                   <form>
-                    <select name="v1" id="v1" class="form-control bg-white border-0"
-                      placeholder="วันนี้ความรู้สึกคุณเป็นสีอะไร" style="height: 55px;">
-                      <option value="">-- วันนี้ความรู้สึกคุณเป็นสีอะไร --</option>
-                      <option value="volvo">สีเหลือง = ความสุข</option>
-                      <option value="volvo">สีแดง = ความโกรธ</option>
-                      <option value="volvo">สีเขียว = ความกลัว</option>
-                      <option value="volvo">สีฟ้า = ความเศร้า</option>
-                    </select>
-
+                    <hr>
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input bg-warning" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          สีเหลือง = ความสุข
+                        </label>
+                      </div>
+                    </div>
                     <br>
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input bg-danger" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        สีแดง = ความโกรธ
+                      </label>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input bg-success" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                        <label class="form-check-label" for="flexRadioDefault3">
+                          สีเขียว = ความกลัว
+                        </label>
+                      </div>
+
+                    </div>
+                    <br>
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input bg-primary" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                        <label class="form-check-label" for="flexRadioDefault3">
+                          สีฟ้า = ความเศร้า
+                        </label>
+                      </div>
+                    </div>
+                   </div>
 
 
-                    <select name="v2" id="v2" class="form-control bg-white border-0" placeholder="ระดับความรู้สึก"
+
+                    <hr>
+      
+
+                    <select name="v2" id="v2" class="form-select" placeholder="ระดับความรู้สึก"
                       style="height: 55px;">
                       <option value="">-- ระดับความรู้สึก --</option>
                       <option value="volvo">1 = รู้สึกน้อยที่สุด</option>
@@ -120,21 +154,24 @@ img {vertical-align: middle;}
                     </select>
 
                     <br>
-                    <textarea name="v3" id="v3" class="form-control bg-white border-0" rows="5"
+                    
+                    <textarea name="v3" id="v3" class="form-control shadow-textarea " rows="5"
                       placeholder="อะไรทำให้คุณรู้สึกอย่างนั้น"></textarea>
+               
                 </div>
                 <div class="mySlides">
+                  <div class="text-center">
                   <label class="choose_taital"><span
                       class="badge rounded-pill bg-info">เกมข้อดีมีในตัว...<span></span></label><br><br>
                   <h1><span>วันที่ปัจจุบันคือ</span> <span class="badge rounded-pill bg-info">
-                      <script>
-                         ar date = new Date();
-                         ocument.write(
-                           ate.getDate() + "-" +
-                           parseInt(date.getMonth()) + 1) + "-" +
-                           ate.getFullYear()
-                         ;
-                      </script>
+                    <script>
+                      var date = new Date();
+                      document.write(
+                        date.getDate() + "-" +
+                        (parseInt(date.getMonth()) + 1) + "-" +
+                        date.getFullYear()
+                      );
+                    </script>
                     </span></h1>
 
                   <h3>วิธีการเล่นเกมนี้ง่ายมาก!</h3>
@@ -143,8 +180,8 @@ img {vertical-align: middle;}
 
 
                   <br><br>
-
-                  <textarea name="v3" id="v3" class="form-control bg-white border-0" rows="5"
+                  </div>
+                  <textarea name="v3" id="v3" class="form-control" rows="5"
                     placeholder="อะไรทำให้คุณรู้สึกอย่างนั้น"></textarea>
 
                 </div>
@@ -155,26 +192,26 @@ img {vertical-align: middle;}
 
 
                 <div class="mySlides">
-
+                  <div class="text-center">
                   <label class="choose_taital"><span
                       class="badge rounded-pill bg-info">เพลง<span></span></label><br><br>
                   <h1><span>วันที่ปัจจุบันคือ</span> <span class="badge rounded-pill bg-info">
-                      <script>
-                         ar date = new Date();
-                         ocument.write(
-                           ate.getDate() + "-" +
-                           parseInt(date.getMonth()) + 1) + "-" +
-                           ate.getFullYear()
-                         ;
-                      </script>
+                    <script>
+                      var date = new Date();
+                      document.write(
+                        date.getDate() + "-" +
+                        (parseInt(date.getMonth()) + 1) + "-" +
+                        date.getFullYear()
+                      );
+                    </script>
                     </span></h1>
-
+                  </div>
                   <iframe style="width:100%" src="https://www.youtube.com/embed/K_aFdCvnwFk"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
                   <br><br>
-                  <textarea name="v3" id="v3" class="form-control bg-white border-0" rows="5"
+                  <textarea name="v3" id="v3" class="form-control" rows="5"
                     placeholder="คุณรู้สึกอะไรเมื่อฟังเพลงนี้"></textarea>
                   <br>
                   <a class="btn btn-primary w-100 py-3" type="submit"
@@ -186,12 +223,8 @@ img {vertical-align: middle;}
               <br>
 
               <!-- Comment Form End -->
-            </div>
-          </div>
-
-        </div>
-
-        <div class="w3-center w3-container w3-section w3-large w3-text-black w3-display-bottommiddle"
+            </div> 
+            <div class="w3-center w3-container w3-section w3-large w3-text-black w3-display-bottommiddle"
           style="width:100%">
           <div class="w3-left w3-hover-text-khaki" onclick="plusSlides(-1)">&#10094;</div>
           <div class="w3-right w3-hover-text-khaki" onclick="plusSlides(1)">&#10095;</div>
@@ -199,6 +232,11 @@ img {vertical-align: middle;}
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
+          </div>
+ 
+        </div>
+
+      
       </div>
     </div>
   </div>

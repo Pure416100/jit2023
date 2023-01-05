@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
     
     <link href="{{ URL::to('assets/css/style.css') }}" rel="stylesheet">
-
+    
 </head>
 
 <body>

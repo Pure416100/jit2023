@@ -27,18 +27,8 @@
 @section('content')
 
     
-    <div class="about_section layout_padding">
- 
-                    
-                    <div class="row page-titles">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item active"><a href="javascript:void(0)">App</a></li>
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Calendar</a></li>
-                        </ol>
-                    </div>
-                    <!-- row -->
-    
-    
+<div class="about_section layout_padding">
+        <div class="container">
                     <div class="row">
                         <div class="col-xl-3 col-xxl-4">
                             <div class="card">
@@ -132,31 +122,9 @@
     
                 </div>
             </div>
-            <!--**********************************
-                Content body end
-            ***********************************-->
-    
-    
-            <!--**********************************
-                Footer start
-            ***********************************-->
-            <div class="footer">
-                <div class="copyright">
-                    <p>Copyright © Designed &amp; Developed by <a href="https://dexignlab.com/" target="_blank">DexignLab</a> 2022</p>
-                </div>
-            </div>
-            <!--**********************************
-                Footer end
-            ***********************************-->
-    
-            
-    
-    
+        
+           
         </div>
-        <!--**********************************
-            Main wrapper end
-        ***********************************-->
-    
         <!--**********************************
             Scripts
         ***********************************-->
@@ -169,9 +137,11 @@
         <script src="vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
         
         <script src="js/custom.min.js"></script>
-        <script src="js/dlabnav-init.js"></script>
-        <script src="js/demo.js"></script>
-        <script src="js/styleSwitcher.js"></script>
-        
+       
+       
+        @include('layouts.footer')
+ 
     </body>
-@endsection
+    </html>
+     @endsection
+    
