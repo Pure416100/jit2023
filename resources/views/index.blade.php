@@ -33,6 +33,8 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+  
 </head>
 
 <body>
@@ -84,7 +86,7 @@
                     <hr>
                     <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
 
-                    <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/day1') }}">บันทึกความรู้สึก</a>
+                    <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('Menu_day') }}">บันทึกความรู้สึก</a>
                     <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('services') }}">ประวัติบันทึกความรู้ศึก</a>
                     <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('about') }}">เกี่ยวกับ</a>
 
@@ -120,7 +122,7 @@
             <h1 class="banner_taital">Get to know</h1>
             <h1 class="banner_taital_1">your ideas best</h1>
             <p class="banner_text">Get rid of potential sensation problems.</p>
-            <div class="contact_bt"><a href="{{ url('/day1') }}">start <span class="contact_padding"><img src="images/contact-icon.png"></span></a></div>
+            <div class="contact_bt"><a href="{{ url('/Menu_day') }}">start <span class="contact_padding"><img src="images/contact-icon.png"></span></a></div>
           </div>
           <div class="col-sm-2">
             <div class="play_icon"><a href="#"><img src="images/play-icon.png"></a></div>

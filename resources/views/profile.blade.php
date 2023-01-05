@@ -22,7 +22,7 @@
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">{{ __('ลงทะเบียนผู้ใช้งาน') }}</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">{{ __('ข้อมูลผู้ใช้งาน') }}</h1>
 
 
 
@@ -59,11 +59,13 @@
                                                 @enderror
                                             </div>
                                         </div>
+                                       
                                         <div class="row mb-3"><label for="name" class="col-md-4 col-form-label text-md-end">สมัครเมื่อ</label>
                                             <div class="col-md-6">
-                                                <h6>{{ Auth::user()->created_at->format('j F, Y เวลา h:i' )}}</h6>
+                                                <h5>{{ Auth::user()->created_at->format('j F, Y เวลา h:i' )}}</h6>
                                             </div>
-                                            <br>
+                                        
+                                            <hr>
                                             <div class="row mb-0">
                                                 <div class="col-md-6 offset-md-4">
                                                     <button type="submit" class="btn btn-primary">

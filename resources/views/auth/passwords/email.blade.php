@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ URL::to('assets/css/style.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/logo1.1.png">
     <style>
         body,
         h1 {
@@ -31,7 +33,7 @@
 <body>
 
     <div class="bgimg w3-display-container w3-animate-opacity">
-        <div class="w3-display-topleft w3-padding-large w3-xlarge">
+        <div class="w3-display-topleft w3-padding-large w3-xlarge bg-white">
             Reset password
         </div> 
         
@@ -39,7 +41,7 @@
         <div class="container">
             <a class="w3-btn w3-round-xlarge w3-white" href="{{ url('/login') }}">ไปยังหน้าแรก</a>
             <div class="row justify-content-center">
-                <div class="card o-hidden border-0 shadow-lg my-5 bg-light grey">
+                <div class="card o-hidden border-0 shadow-lg my-5 bg-white">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                        

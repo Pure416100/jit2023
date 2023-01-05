@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
 
 <head>
 
@@ -43,7 +43,7 @@
 
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
     
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <link href="{{ URL::to('assets/css/style.css') }}" rel="stylesheet">
 
 </head>
 
@@ -97,7 +97,7 @@
                                             <hr>
                                             <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>
 
-                                            <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/day1') }}">บันทึกความรู้สึก</a>
+                                            <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('Menu_day') }}">บันทึกความรู้สึก</a>
                                             <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('services') }}">ประวัติบันทึกความรู้ศึก</a>
                                             <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('about') }}">เกี่ยวกับ</a>
 

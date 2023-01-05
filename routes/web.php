@@ -40,8 +40,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/email', function () {
-    return view('email');
+Route::get('/results', function () {
+    return view('results');
 });
 
 
@@ -53,6 +53,13 @@ Route::get('/contact', function () {
 })->middleware('auth');
 Route::get('/services', function () {
     return view('Services');
+})->middleware('auth');
+
+Route::get('/Menu_day', function () {
+    return view('Menu_day');
+});
+Route::get('/home', function () {
+    return view('home');
 })->middleware('auth');
 Route::get('/day1', function () {
     return view('day1');
@@ -70,6 +77,7 @@ Route::get('/day5', function () {
     return view('day5');
 })->middleware('auth');
 
+
 Route::get('/team', function () {
     return view('team');
 })->middleware('auth');
@@ -77,6 +85,9 @@ Route::get('/team', function () {
 Route::get('/choose', function () {
     return view('choose');
 });
+
+
+
 
 Route::get('/profile', function () {
     return view('profile');
