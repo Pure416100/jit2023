@@ -62,11 +62,64 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 
-input[type="radio"].form-check-input {
-  border-radius: 50%;
-}
+
 input[type=radio]{
   transform:scale(1.5);
+}
+
+/* Range */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+/**/
+
+.slider:hover {
+  opacity: 1;
+}
+
+.sliderticks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.sliderticks p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 1px;
+  background: #D3D3D3;
+  height: 10px;
+  line-height: 40px;
+  margin: 0 0 20px 0;
 }
 </style>
 
@@ -97,12 +150,12 @@ input[type=radio]{
                       </script>
                     </span></h1>
  </div>
-                  <form>
-                    <hr>
+ <form method="POST" action="{{url('store1') }}" enctype="multipart/form-data">
+  @csrf
                   <div class="row">
                     <div class="col">
                       <div class="form-check">
-                        <input class="form-check-input bg-warning" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                        <input class="form-check-input bg-warning" type="radio" value="สีเหลือง" name="flexRadioDefault" id="flexRadioDefault1" checked>
                         <label class="form-check-label" for="flexRadioDefault1">
                           สีเหลือง = ความสุข
                         </label>
@@ -111,7 +164,7 @@ input[type=radio]{
                     <br>
                     <div class="col">
                       <div class="form-check">
-                        <input class="form-check-input bg-danger" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <input class="form-check-input bg-danger" type="radio" value="สีแดง" name="flexRadioDefault" id="flexRadioDefault2" checked>
                       <label class="form-check-label" for="flexRadioDefault2">
                         สีแดง = ความโกรธ
                       </label>
@@ -120,7 +173,7 @@ input[type=radio]{
                     <br>
                     <div class="col">
                       <div class="form-check">
-                        <input class="form-check-input bg-success" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                        <input class="form-check-input bg-success" type="radio" value="สีเขียว" name="flexRadioDefault" id="flexRadioDefault3" checked>
                         <label class="form-check-label" for="flexRadioDefault3">
                           สีเขียว = ความกลัว
                         </label>
@@ -130,7 +183,7 @@ input[type=radio]{
                     <br>
                     <div class="col">
                       <div class="form-check">
-                        <input class="form-check-input bg-primary" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                        <input class="form-check-input bg-primary" type="radio" value="สีฟ้า" name="flexRadioDefault" id="flexRadioDefault4" checked>
                         <label class="form-check-label" for="flexRadioDefault3">
                           สีฟ้า = ความเศร้า
                         </label>
@@ -143,15 +196,20 @@ input[type=radio]{
                     <hr>
       
 
-                    <select name="v2" id="v2" class="form-select" placeholder="ระดับความรู้สึก"
-                      style="height: 55px;">
-                      <option value="">-- ระดับความรู้สึก --</option>
-                      <option value="volvo">1 = รู้สึกน้อยที่สุด</option>
-                      <option value="volvo">2 = รู้สึกน้อย</option>
-                      <option value="volvo">3 = รู้สึกปานกลาง</option>
-                      <option value="volvo">4 = รู้สึกมาก</option>
-                      <option value="volvo">5 = รู้สึกมากที่สุด</option>
-                    </select>
+                    <div class="slidecontainer">
+                      <label for="customRange2" >ระดับความรู้สึก: </label>
+                      <label for="" id="demo" style="font-weight:bold;color:red"></label>
+                      <input type="range" min="1" max="5"  value="{{ old('value') }}" class="slider" id="myRange">
+                      <div class="sliderticks">
+                        <p>น้อยที่สุด</p>
+                        <p>น้อย</p>
+                        <p>ปานกลาง</p>
+                        <p>มาก</p>
+                        <p>มากที่สุด</p>
+                      </div>
+                    </div>
+    
+                  <br><br><br><hr>
 
                     <br>
                     
@@ -271,7 +329,15 @@ function showSlides(n) {
   </script>
 
 
-</body>
+<script>
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("demo");
+  output.innerHTML = slider.value; // Display the default slider value
 
+  // Update the current slider value (each time you drag the slider handle)
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+}
+</script>
 </html>
 @endsection

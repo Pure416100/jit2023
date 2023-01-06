@@ -88,6 +88,7 @@
 
                     <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('Menu_day') }}">บันทึกความรู้สึก</a>
                     <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('services') }}">ประวัติบันทึกความรู้ศึก</a>
+                    <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('certificate1') }}">รางวัลของฉัน</a>
                     <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('about') }}">เกี่ยวกับ</a>
 
                     <a class=" w3-btn w3-round-xlarge w3-hover-white" href="{{ url('team') }}">ทีมผู้พัฒนา</a>
@@ -125,7 +126,21 @@
             <div class="contact_bt"><a href="{{ url('/Menu_day') }}">start <span class="contact_padding"><img src="images/contact-icon.png"></span></a></div>
           </div>
           <div class="col-sm-2">
-            <div class="play_icon"><a href="#"><img src="images/play-icon.png"></a></div>
+            <div class="play_icon"><a type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/play-icon.png"></a>
+              <div class="dropdown">
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <video width="320" height="240" controls>
+                    <source src="myVideo.mp4" type="video/mp4">
+                    <source src="myVideo.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-sm-5">
             <div><img src="images/1.png" class="image_1"></div>
@@ -395,6 +410,13 @@
   <!-- javascript -->
   <script src="js/owl.carousel.js"></script>
   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+  <script src="vendor/global/global.min.js"></script>
+<script src="vendor/chart.js/Chart.bundle.min.js"></script>
+<script src="vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+<script src="vendor/owl-carousel/owl.carousel.js"></script>
+<script src="js/dashboard/cards-center.js"></script>
+
   <script>
     $(document).ready(function() {
       $(".fancybox").fancybox({

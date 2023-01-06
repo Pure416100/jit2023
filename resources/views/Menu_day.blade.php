@@ -1,3 +1,13 @@
+<style>
+
+    .bgimg {
+        background-image: url('/images/bg-menu.day.jpg');
+        min-height: 10%;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
+
 @extends('layouts.app')
 @section('content')
 <div class="choose_section layout_padding">
@@ -6,7 +16,7 @@
         <div class="row invoice-card-row">
 
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -22,7 +32,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="35px" height="34px">
@@ -39,7 +49,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -56,7 +66,7 @@
             </div>
             <br>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -72,7 +82,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -88,7 +98,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -104,7 +114,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -120,7 +130,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -136,7 +146,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -152,7 +162,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -168,7 +178,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -184,7 +194,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -200,7 +210,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -216,7 +226,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -232,7 +242,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -248,7 +258,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -264,7 +274,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -280,7 +290,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -296,7 +306,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -312,7 +322,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">
@@ -328,7 +338,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-xxl-3 col-sm-6">
-                <div class="card bg-secondary">
+                <div class="card bgimg">
                     <div class="card-body d-flex">
                         <div class="icon me-3">
                             <svg width="33px" height="32px">

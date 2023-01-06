@@ -45,6 +45,9 @@ Route::get('/results', function () {
 });
 
 
+Route::get('/certificate1', function () {
+    return view('certificate1');
+})->middleware('auth');
 Route::get('/about', function () {
     return view('about');
 })->middleware('auth');
