@@ -4,24 +4,8 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-
-use App\Models\User;
-use App\Models\blog;
-use App\Models\Hospital;
-use App\Models\QuestionTest;
-use App\Models\Result;
-use App\Models\report_Admin;
-use App\Http\Controllers\TestsController;
-use App\Http\Controllers\userController;
-use App\Http\Controllers\welcomeController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\HospitalController;
-use App\Http\Controllers\QuestionTestController;
-use App\Http\Controllers\SocialAuthFacebookController;
-use App\Http\Controllers\case_studyController;
-use App\Http\Controllers\comment_cstdController;
-use App\Http\Controllers\notificationController;
+use App\Models\diary_day;
+use App\Http\Controllers\diary_dayController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 /*
@@ -44,6 +28,7 @@ Route::get('/results', function () {
     return view('results');
 });
 
+Route::get('/store', [diary_dayController::class, 'store']);
 
 Route::get('/certificate1', function () {
     return view('certificate1');
