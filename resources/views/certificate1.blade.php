@@ -22,7 +22,7 @@
                                         <div class="me-auto w3-center">
                                             <h3 class="text-white">ประกาศนียบัตรแห่งความสุข</h2>  <hr class="text-white"> 
                                             <h6  class="text-white">ขอมอบประกาศนียบัตรให้แก่</h6>
-                                            <p  class="text-white">{{ Auth::user()->username }}</p>
+                                            <p  class="text-white">{{ Auth::user()->name }}</p>
                                             <h6  class="text-white">ผู้ที่ได้เรียนรู้วิธีจัดการอารมณ์เศร้า</h6>
                                             <h6  class="text-white">เมื่อวันที่ {{ Auth::user()->created_at->format('j F, Y' )}} </h6>
                                             <hr>
@@ -40,7 +40,7 @@
                                         <div class="me-auto w3-center">
                                             <h3 class="text-white">ประกาศนียบัตรแห่งความสุข</h2>  <hr class="text-white"> 
                                             <h6  class="text-white">ขอมอบประกาศนียบัตรให้แก่</h6>
-                                            <p  class="text-white">{{ Auth::user()->username }}</p>
+                                            <p  class="text-white">{{ Auth::user()->name }}</p>
                                             <h6  class="text-white">ผู้ที่ได้เรียนรู้วิธีจัดการอารมณ์เศร้า</h6>
                                             <h6  class="text-white">เมื่อวันที่ {{ Auth::user()->created_at->format('j F, Y' )}} </h6>
                                             <hr>
@@ -59,7 +59,7 @@
                                         <div class="me-auto w3-center">
                                             <h3 class="text-white">ประกาศนียบัตรแห่งความสุข</h2>  <hr class="text-white"> 
                                             <h6  class="text-white">ขอมอบประกาศนียบัตรให้แก่</h6>
-                                            <p  class="text-white">{{ Auth::user()->username }}</p>
+                                            <p  class="text-white">{{ Auth::user()->name }}</p>
                                             <h6  class="text-white">ผู้ที่ได้เรียนรู้วิธีจัดการอารมณ์เศร้า</h6>
                                             <h6  class="text-white">เมื่อวันที่ {{ Auth::user()->created_at->format('j F, Y' )}} </h6>
                                             <hr>
@@ -77,7 +77,7 @@
                                         <div class="me-auto w3-center">
                                             <h3 class="text-white">ประกาศนียบัตรแห่งความสุข</h2>  <hr class="text-white"> 
                                             <h6  class="text-white">ขอมอบประกาศนียบัตรให้แก่</h6>
-                                            <p  class="text-white">{{ Auth::user()->username }}</p>
+                                            <p  class="text-white">{{ Auth::user()->name }}</p>
                                             <h6  class="text-white">ผู้ที่ได้เรียนรู้วิธีจัดการอารมณ์เศร้า</h6>
                                             <h6  class="text-white">เมื่อวันที่ {{ Auth::user()->created_at->format('j F, Y' )}} </h6>
                                             <hr>

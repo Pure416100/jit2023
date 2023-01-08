@@ -93,7 +93,7 @@
                                         <div class="container">
                                             @auth
                                             <h3 class="w3-text-white">ยินดีตอนรับ</h3>
-                                            <h3 class="w3-text-white">{{ Auth::user()->username }}</h3>
+                                            <h3 class="w3-text-white">{{ Auth::user()->name }}</h3>
                                             <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/profile') }}">ข้อมูลส่วนตัว</a>
                                             <hr>
                                             <a class="w3-btn w3-round-xlarge w3-hover-white" href="{{ url('/') }}">หน้าแรก</a>

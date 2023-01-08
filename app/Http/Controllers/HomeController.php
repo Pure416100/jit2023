@@ -34,6 +34,7 @@ class HomeController extends Controller
 
         $user = Auth::user()->id;
         $update = User::findOrFail($user);
+        $update->name = $request->input('name');
         $update->username = $request->input('username');
         $update->email = $request->input('email');
         
