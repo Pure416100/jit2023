@@ -39,6 +39,7 @@ class SocialAuthLoginController extends Controller
             } else {
                 $newUser = User::create([
                     
+                    'name' => $userData["name"],
                     'username' => $userData["email"],
                     'email' => $userData["email"],
                     'email_verified_at' => 'current_timestamp()',
@@ -80,6 +81,7 @@ class SocialAuthLoginController extends Controller
             } else {
                 $newUser = User::create([
                   
+                    'name' => $userData["name"],
                     'username' => $userData["name"],
                     'email' => $userData["email"],
                     'email_verified_at' => 'current_timestamp()',

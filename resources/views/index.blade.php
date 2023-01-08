@@ -133,7 +133,7 @@
                   <a class="dropdown-item" href="#">Another action</a>
                   <a class="dropdown-item" href="#">Something else here</a>
                   <div class="dropdown-divider"></div>
-                  <video width="320" height="240" controls>
+                  <video width="820" height="540" controls>
                     <source src="myVideo.mp4" type="video/mp4">
                     <source src="myVideo.ogg" type="video/ogg">
                     Your browser does not support the video tag.
