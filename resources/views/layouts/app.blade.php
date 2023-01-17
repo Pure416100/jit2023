@@ -43,6 +43,8 @@
 
    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-blue.css">
     
+   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
    
     <link href="{{ URL::to('assets/css/style.css') }}" rel="stylesheet">
     

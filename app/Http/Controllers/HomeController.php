@@ -44,6 +44,7 @@ class HomeController extends Controller
         return redirect('/profile')->with('Success', "อัพเดตข้อมูลเรียบร้อย");
     }
 
+
     public function GoogleCallback()
     {
         return view('GoogleCallbacks');

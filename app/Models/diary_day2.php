@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class diary_day extends Model
+class diary_day2 extends Model
 {
     protected $fillable = [
         'color_feel_today',
@@ -14,7 +14,7 @@ class diary_day extends Model
         'rounds_id',
     ];
     public $timestamps = false;
-    protected $table = 'day1';
+    protected $table = 'day2';
 
 public function diary_day()
 {

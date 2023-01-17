@@ -4,28 +4,22 @@
     .mySlides {
         display: none
     }
-
     img {
         vertical-align: middle;
     }
-
     /* Slideshow container */
     .slideshow-container {
         max-width: 1000px;
         position: relative;
         margin: auto;
     }
-
     /* Next & previous buttons */
-
     /* Position the "next button" to the right */
     .next {
         right: 0;
         border-radius: 3px 0 0 3px;
     }
-
     /* On hover, add a black background color with a little bit see-through */
-
     /* Caption text */
     .text {
         color: #f2f2f2;
@@ -36,10 +30,7 @@
         width: 100%;
         text-align: center;
     }
-
     /* Number text (1/3 etc) */
-
-
     /* The dots/bullets/indicators */
     .dot {
         cursor: pointer;
@@ -51,33 +42,26 @@
         display: inline-block;
         transition: background-color 0.6s ease;
     }
-
     .active,
     .dot:hover {
         background-color: #717171;
     }
-
     /* Fading animation */
     .fade {
         animation-name: fade;
         animation-duration: 1.5s;
     }
-
     @keyframes fade {
         from {
             opacity: .4
         }
-
         to {
             opacity: 1
         }
     }
-
-
     input[type=radio] {
         transform: scale(1.5);
     }
-
     /* Range */
     .slider {
         -webkit-appearance: none;
@@ -90,7 +74,6 @@
         -webkit-transition: .2s;
         transition: opacity .2s;
     }
-
     .slider::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
@@ -100,7 +83,6 @@
         background: #04AA6D;
         cursor: pointer;
     }
-
     .slider::-moz-range-thumb {
         width: 25px;
         height: 25px;
@@ -108,19 +90,15 @@
         background: #04AA6D;
         cursor: pointer;
     }
-
     /**/
-
     .slider:hover {
         opacity: 1;
     }
-
     .sliderticks {
         display: flex;
         justify-content: space-between;
         padding: 0 12px;
     }
-
     .sliderticks p {
         position: relative;
         display: flex;
@@ -145,7 +123,7 @@
                   <div class="card o-hidden border-0 shadow-lg my-5  w3-theme-l4">
                         <div class="card-body p-0">
                             <div class="p-5">
-
+                                <form method="get" action="{{ url('store') }}" enctype="multipart/form-data">
                                 <div class="mySlides">
                                     <div class="text-center">
                                         <!-- Nested Row within Card Body -->
@@ -162,11 +140,11 @@
                                                 </script>
                                             </span></h1>
                                     </div>
-                                    <form method="get" action="{{ url('store') }}" enctype="multipart/form-data">
+                                  
                                         @csrf
                                         <label for="customRange1">วันนี่ความรู้ศึกเป็นสีอะไร : </label>
-                                        <div class="row">
-                                            <div class="col">
+                                        <div class="row ">
+                                            <div class="col-md-3">
 
                                                 <div class="form-check">
                                                     <input class="form-check-input bg-warning" type="radio"
@@ -292,7 +270,7 @@
                                     <br><br>
                                     <textarea name="v5" id="v5" class="form-control" rows="5" placeholder="คุณรู้สึกอะไรเมื่อฟังเพลงนี้"></textarea>
                                     <br>
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary" id="save" name="save">
                                         ส่งแบบบันทึก
                                     </button>
 
@@ -321,15 +299,12 @@
         <script>
             let slideIndex = 1;
             showSlides(slideIndex);
-
             function plusSlides(n) {
                 showSlides(slideIndex += n);
             }
-
             function currentSlide(n) {
                 showSlides(slideIndex = n);
             }
-
             function showSlides(n) {
                 let i;
                 let slides = document.getElementsByClassName("mySlides");
@@ -356,7 +331,6 @@
             var slider = document.getElementById("myRange");
             var output = document.getElementById("demo");
             output.innerHTML = slider.value; // Display the default slider value
-
             // Update the current slider value (each time you drag the slider handle)
             slider.oninput = function() {
                 output.innerHTML = this.value;

@@ -3,9 +3,10 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\rounds_completed;
 use App\Models\diary_day;
 use App\Http\Controllers\diary_dayController;
+use App\Http\Controllers\PDFController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 /*
@@ -29,6 +30,16 @@ Route::get('/results', function () {
 });
 
 Route::get('/store', [diary_dayController::class, 'store']);
+Route::get('/store2', [diary_dayController::class, 'store2']);
+Route::get('/store3', [diary_dayController::class, 'store2']);
+Route::get('/store4', [diary_dayController::class, 'store4']);
+Route::get('/store5', [diary_dayController::class, 'store5']);
+Route::get('/store6', [diary_dayController::class, 'store6']);
+
+
+
+
+
 
 Route::get('/certificate1', function () {
     return view('certificate1');
@@ -82,6 +93,17 @@ Route::get('/profile', function () {
 });
 
 Auth::routes();
+
+Route::get('myPDF', function () {
+    return view('myPDF');
+});
+Route::get('pdf/{id}', [App\Http\Controllers\PDFController::class, 'pdf']);
+
+Route::middleware(['auth:sanctum'])->get('/services', function () {
+    $rounds_story = rounds_completed::all();
+    return view('Services', compact(('rounds_story')));
+})->name('/services');
+
 
 Route::get('GoogleCallbacks', [App\Http\Controllers\HomeController::class, 'GoogleCallback']);
 Route::post('ajaxRequestPost', [App\Http\Controllers\SocialAuthLoginController::class, 'ajaxRequestPost'])->name('ajaxRequest.post');
