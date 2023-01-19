@@ -9,7 +9,7 @@
         <div class="services_section layout_padding">
             <div class="container">
                 <h1 class="services_taital"><span>rgse</span> <img src="images/icon-1.png"> <span
-                        style="color: #1f1f1f">บันทึกความรู้สึก</span></h1>
+                        style="color: #1f1f1f">71477บันทึกความรู้สึก</span></h1>
                 <p class="services_text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                     magna aliqua</p>
                 <div class="row">
