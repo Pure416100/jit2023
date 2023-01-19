@@ -94,10 +94,8 @@ Route::get('/profile', function () {
 
 Auth::routes();
 
-Route::get('myPDF', function () {
-    return view('myPDF');
-});
-Route::get('pdf/{id}', [App\Http\Controllers\PDFController::class, 'pdf']);
+Route::get('/mypdf/{id}', [App\Http\Controllers\PDFController::class, 'pdf']);
+Route::get('/mypdf', [App\Http\Controllers\PDFController::class, 'pdf2']);
 
 Route::middleware(['auth:sanctum'])->get('/services', function () {
     $rounds_story = rounds_completed::all();
